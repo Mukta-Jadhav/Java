@@ -8,8 +8,8 @@ public class SumArray {
         int n=5;
 		int sum=0;
 		int  arr[]= {23,45,22,2,45};
-		//Arrays.sort(arr);
-		//System.out.println(arr);
+		Arrays.sort(arr);
+		System.out.println("Sorted array:"+Arrays.toString(arr));
 		for(int i=0;i<5;i++) {
 			sum=sum+arr[i];
 		}
@@ -19,3 +19,4 @@ public class SumArray {
 	}
 
 }
+
