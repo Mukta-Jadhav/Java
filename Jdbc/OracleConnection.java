@@ -7,10 +7,10 @@ import java.sql.ResultSet;
 
 public class OracleConnection {
 
-	public static void main(String[] args) throws Exception
+	public static void main(String[] args) throws ClassNotFoundException,SQLException
 	{
 		  Class.forName("Oracle.jdbc.driver.OracleDriver");
-		  Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl","System","123");          Statement st=con.createStatement();
+		  Connection con=DriverManager.getConnection("jdbc:oracle:thin:@//localhost:1521/orclpdb","bjs","123");          Statement st=con.createStatement();
 		  String Query="Select * from employee";
 		  ResultSet Es=st.executeQuery(Query);
 		  while(Es.next()) {
@@ -19,3 +19,4 @@ public class OracleConnection {
 	}
 
 }
+
